@@ -34,3 +34,14 @@ name = input("Enter name: ")
 age = input("Enter age: ")
 print("Your name is "+ name + " of age "+ age)
 
+a=10
+print(type(a))
+
+a=10.2
+print(type(a))
+
+my_income=100
+tax_rate=0.1
+my_taxes= my_income * tax_rate
+print(my_taxes)
+
