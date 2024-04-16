@@ -188,3 +188,38 @@ print(sq_list)
 
 even_list = list(filter(lambda num : num%2==0, my_list))
 print(even_list)
+
+18. SCOPE - LEGB Rule
+L - Local
+E - Enclosing function locals
+G - Global (Module)
+B - Built In (Python)
+
+19. Special Dunder methods
+class Book():
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+    
+    def __str__(self):
+        return str({'title':self.title, 'author':self.author})
+    
+    def __len__(self):
+        return self.page
+
+20. Pypi - repository of third party python packages
+pip install requests
+
+21. __name__ == "__main__"
+if __name__ == "__main__":
+    print("one.py is run directly")
+    func()
+    say_hello()
+    say_hi()
+else:
+    print("one.py is imported")
+
+22. 
+from <package> import <module>
+from <package.module> import <function>
