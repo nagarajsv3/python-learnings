@@ -223,3 +223,11 @@ else:
 22. 
 from <package> import <module>
 from <package.module> import <function>
+
+23. asyncio - refer concurrencyasyncio
+    #await coroutine - runs the coroutine 
+    #create task - creates task
+    #await task - waites till the task is run
+
+    #b, c = await asyncio.gather(brew_coffee(), toast_bagel()) - run multiple coroutines together
+    #res = await brew_coffee() - run 1 coroutine 
