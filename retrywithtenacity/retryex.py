@@ -32,6 +32,22 @@ def exponential_backoff_attempt():
     print(datetime.datetime.now())
     raise Exception
 
+def is_invalid_code(code):
+    success_range = range(200,300)
+    return code not in success_range
+
+@retry(retry=retry_if_result(is_invalid_code))
+def my_success_response():
+    print('success')
+    return 400
+
+print(is_invalid_code(200))
+print(is_invalid_code(400))
+
+my_success_response()
+
+
 
 #make_api_call()
-exponential_backoff_attempt()
+#exponential_backoff_attempt()
+
